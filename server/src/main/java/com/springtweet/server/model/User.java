@@ -1,5 +1,6 @@
 package com.springtweet.server.model;
 
+import com.springtweet.server.model.audit.DateAudit;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
