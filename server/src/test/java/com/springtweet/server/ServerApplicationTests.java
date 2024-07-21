@@ -1,10 +1,10 @@
-package com.springtweet;
+package com.springtweet.server;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringtweetApplicationTests {
+class ServerApplicationTests {
 
 	@Test
 	void contextLoads() {
