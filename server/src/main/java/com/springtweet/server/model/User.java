@@ -1,22 +1,21 @@
 package com.springtweet.server.model;
 
 import com.springtweet.server.model.audit.DateAudit;
-import jakarta.persistence.*;
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
 import org.hibernate.annotations.NaturalId;
-
+import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 import java.util.HashSet;
 import java.util.Set;
 
 @Entity
 @Table(name = "users", uniqueConstraints = {
         @UniqueConstraint(columnNames = {
-                "username"
+            "username"
         }),
         @UniqueConstraint(columnNames = {
-                "email"
+            "email"
         })
 })
 public class User extends DateAudit {

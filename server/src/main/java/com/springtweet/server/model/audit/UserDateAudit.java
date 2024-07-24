@@ -1,10 +1,12 @@
 package com.springtweet.server.model.audit;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import jakarta.persistence.Column;
-import jakarta.persistence.MappedSuperclass;
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.LastModifiedBy;
+
+import javax.persistence.MappedSuperclass;
+
+
 
 @MappedSuperclass
 @JsonIgnoreProperties(
@@ -12,8 +14,8 @@ import org.springframework.data.annotation.LastModifiedBy;
         allowGetters = true
 )
 public abstract class UserDateAudit extends DateAudit {
+
     @CreatedBy
-    @Column(updatable = false)
     private Long createdBy;
 
     @LastModifiedBy

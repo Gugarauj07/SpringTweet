@@ -1,7 +1,7 @@
 package com.springtweet.server.model;
 
-import jakarta.persistence.*;
 import org.hibernate.annotations.NaturalId;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "roles")
@@ -38,4 +38,5 @@ public class Role {
     public void setName(RoleName name) {
         this.name = name;
     }
+
 }

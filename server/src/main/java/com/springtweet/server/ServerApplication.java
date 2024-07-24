@@ -5,12 +5,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters;
 
-import jakarta.annotation.PostConstruct;
+import javax.annotation.PostConstruct;
 import java.util.TimeZone;
 
 @SpringBootApplication
 @EntityScan(basePackageClasses = {
-		SpringApplication.class,
+		ServerApplication.class,
 		Jsr310JpaConverters.class
 })
 public class ServerApplication {
@@ -23,5 +23,4 @@ public class ServerApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ServerApplication.class, args);
 	}
-
 }

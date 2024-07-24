@@ -1,8 +1,7 @@
 package com.springtweet.server.payload;
 
-
-import jakarta.validation.constraints.Max;
-import jakarta.validation.constraints.NotNull;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.NotNull;
 
 public class PollLength {
     @NotNull

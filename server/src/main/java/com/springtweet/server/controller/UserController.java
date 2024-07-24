@@ -6,9 +6,10 @@ import com.springtweet.server.payload.*;
 import com.springtweet.server.repository.PollRepository;
 import com.springtweet.server.repository.UserRepository;
 import com.springtweet.server.repository.VoteRepository;
-import com.springtweet.server.security.CurrentUser;
 import com.springtweet.server.security.UserPrincipal;
 import com.springtweet.server.service.PollService;
+import com.springtweet.server.security.CurrentUser;
+import com.springtweet.server.util.AppConstants;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -72,7 +73,6 @@ public class UserController {
                                                          @RequestParam(value = "size", defaultValue = AppConstants.DEFAULT_PAGE_SIZE) int size) {
         return pollService.getPollsCreatedBy(username, currentUser, page, size);
     }
-
 
     @GetMapping("/users/{username}/votes")
     public PagedResponse<PollResponse> getPollsVotedBy(@PathVariable(value = "username") String username,

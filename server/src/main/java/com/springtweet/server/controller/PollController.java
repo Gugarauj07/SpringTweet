@@ -1,10 +1,7 @@
 package com.springtweet.server.controller;
 
-import com.springtweet.server.model.Poll;
-import com.springtweet.server.payload.ApiResponse;
-import com.springtweet.server.payload.PagedResponse;
-import com.springtweet.server.payload.PollRequest;
-import com.springtweet.server.payload.PollResponse;
+import com.springtweet.server.model.*;
+import com.springtweet.server.payload.*;
 import com.springtweet.server.repository.PollRepository;
 import com.springtweet.server.repository.UserRepository;
 import com.springtweet.server.repository.VoteRepository;
@@ -12,7 +9,6 @@ import com.springtweet.server.security.CurrentUser;
 import com.springtweet.server.security.UserPrincipal;
 import com.springtweet.server.service.PollService;
 import com.springtweet.server.util.AppConstants;
-import jakarta.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +16,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-
+import javax.validation.Valid;
 import java.net.URI;
 
 @RestController
@@ -70,8 +66,9 @@ public class PollController {
     @PostMapping("/{pollId}/votes")
     @PreAuthorize("hasRole('USER')")
     public PollResponse castVote(@CurrentUser UserPrincipal currentUser,
-                                 @PathVariable Long pollId,
-                                 @Valid @RequestBody VoteRequest voteRequest) {
+                         @PathVariable Long pollId,
+                         @Valid @RequestBody VoteRequest voteRequest) {
         return pollService.castVoteAndGetUpdatedPoll(pollId, voteRequest, currentUser);
     }
+
 }

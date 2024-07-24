@@ -1,7 +1,7 @@
 package com.springtweet.server.model;
 
 import com.springtweet.server.model.audit.DateAudit;
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "votes", uniqueConstraints = {

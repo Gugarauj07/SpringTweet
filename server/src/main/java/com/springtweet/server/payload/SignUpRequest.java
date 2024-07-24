@@ -1,8 +1,6 @@
 package com.springtweet.server.payload;
 
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
+import javax.validation.constraints.*;
 
 public class SignUpRequest {
     @NotBlank

@@ -1,6 +1,5 @@
 package com.springtweet.server.payload;
-
-import jakarta.validation.constraints.NotNull;
+import javax.validation.constraints.NotNull;
 
 public class VoteRequest {
     @NotNull
@@ -14,3 +13,4 @@ public class VoteRequest {
         this.choiceId = choiceId;
     }
 }
+
