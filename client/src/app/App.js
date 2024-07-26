@@ -71,14 +71,14 @@ class App extends Component {
     this.props.history.push(redirectTo);
     
     notification[notificationType]({
-      message: 'Polling App',
+      message: 'Springtweet',
       description: description,
     });
   }
 
   handleLogin() {
     notification.success({
-      message: 'Polling App',
+      message: 'Springtweet',
       description: "You're successfully logged in.",
     });
     this.loadCurrentUser();

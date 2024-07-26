@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS `users` (
+CREATE TABLE `users` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `name` varchar(40) NOT NULL,
   `username` varchar(15) NOT NULL,
@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
-CREATE TABLE IF NOT EXISTS `roles` (
+CREATE TABLE `roles` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `name` varchar(60) NOT NULL,
   PRIMARY KEY (`id`),
@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS `roles` (
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 
-CREATE TABLE IF NOT EXISTS `user_roles` (
+CREATE TABLE `user_roles` (
   `user_id` bigint(20) NOT NULL,
   `role_id` bigint(20) NOT NULL,
   PRIMARY KEY (`user_id`,`role_id`),
@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS `user_roles` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
-CREATE TABLE IF NOT EXISTS `polls` (
+CREATE TABLE `polls` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `question` varchar(140) NOT NULL,
   `expiration_date_time` datetime NOT NULL,
@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `polls` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
-CREATE TABLE IF NOT EXISTS `choices` (
+CREATE TABLE `choices` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `text` varchar(40) NOT NULL,
   `poll_id` bigint(20) NOT NULL,
@@ -52,7 +52,7 @@ CREATE TABLE IF NOT EXISTS `choices` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
-CREATE TABLE IF NOT EXISTS `votes` (
+CREATE TABLE `votes` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `user_id` bigint(20) NOT NULL,
   `poll_id` bigint(20) NOT NULL,
