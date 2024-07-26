@@ -32,3 +32,10 @@ cd SpringTweet
 ```sh
 docker-compose up --build
 ```
+A aplicação estará disponível em http://localhost:9090
+
+
+### Acessando o Swagger
+Para visualizar a documentação das APIs utilizando Swagger, acesse:
+http://localhost:8080/swagger-ui.html
+
