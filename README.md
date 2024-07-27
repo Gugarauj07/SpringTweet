@@ -4,6 +4,10 @@
 
 O projeto **SpringTweet** é uma aplicação web desenvolvida com Spring Boot que permite a criação e gerenciamento de enquetes (polls). Os usuários podem criar enquetes, votar em opções e visualizar os resultados em tempo real. A aplicação utiliza um banco de dados MySQL para armazenar os dados e oferece uma interface de API documentada com Swagger.
 
+## Demonstração
+![Demonstração](documentation/springtweet.mp4)
+
+
 ## Tecnologias Utilizadas
 
 - **Java 11**
