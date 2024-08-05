@@ -4,9 +4,17 @@ FROM openjdk:11 as build
 # Set the current working directory inside the image
 WORKDIR /app
 
+
+# Install dos2unix
+RUN apt-get update && apt-get install -y dos2unix
+
 # Copy maven executable to the image
 COPY mvnw .
 COPY .mvn .mvn
+
+# Convert mvnw to Unix format and make it executable
+RUN dos2unix mvnw && chmod +x ./mvnw
+
 
 # Copy the pom.xml file
 COPY pom.xml .
